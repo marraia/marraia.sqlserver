@@ -5,9 +5,11 @@
     <Authors>Fernando Mendes</Authors>
     <Description>Biblioteca para auxiliar sua conexão com o SQL Server em seus projetos, de forma fácil e simples!</Description>
     <PackageIcon>marraia.png</PackageIcon>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
-    <FileVersion>1.0.0.2</FileVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <FileVersion>1.0.0.3</FileVersion>
+    <Version>1.0.3</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/marraia/marraia.sqlserver</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
