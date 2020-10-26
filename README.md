@@ -15,9 +15,9 @@ Primeiro passo é adicionar a string de conexão de seu banco de dados SQL Serve
 ```
 
 ## ORM - Dapper
-Nesta biblioteca comtempla o uso do ORM Dapper. Você pode utilizar para se conectar em seu banco de dados.
+Nesta biblioteca comtempla o uso do ORM Dapper.
 
-## Dapper - Injetar o uso do Dapper em sua aplicação
+## Injetar o uso do Marraia.SqlServer em sua aplicação
 
 No arquivo Startup.cs de sua aplicação adicione no método **ConfigureServices** o middleware em específico:
 ```
@@ -25,7 +25,7 @@ No arquivo Startup.cs de sua aplicação adicione no método **ConfigureServices
         {
             ..
             ..
-            services.AddDapperSqlServer(Configuration.GetSection("Connection").Value);
+            services.AddMarraiaSqlServer(Configuration.GetSection("Connection").Value);
         }
 ```
   
