@@ -12,7 +12,7 @@ namespace Marraia.SqlServer.Configurations
 {
     public static class DapperConfigurationsExtensions
     {
-        public static IServiceCollection AddDapperSqlServer(this IServiceCollection service, string connectionString)
+        public static IServiceCollection AddMarraiaSqlServer(this IServiceCollection service, string connectionString)
         {
             service.AddScoped<IDbConnection>(db => new SqlConnection(connectionString));
             service.AddScoped<IUnitOfWork, UnitOfWork>();
