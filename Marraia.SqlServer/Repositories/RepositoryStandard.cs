@@ -1,11 +1,12 @@
-﻿using Marraia.SqlServer.Uow.Interfaces;
+﻿using Marraia.SqlServer.Comum;
+using Marraia.SqlServer.Uow.Interfaces;
 
 using System;
 using System.Data;
 
 namespace Marraia.SqlServer.Repositories
 {
-    public abstract class RepositoryStandard<TEntity, TKey> : IDisposable
+    public abstract class RepositoryStandard<TEntity, TKey> : CommonConfiguration<TEntity>, IDisposable
         where TEntity : class
         where TKey : struct
     {
@@ -16,7 +17,11 @@ namespace Marraia.SqlServer.Repositories
                                        ITransactionBase transactionBase)
         {
             _connection = connection;
-            _connection.Open();
+
+            if (_connection.State == ConnectionState.Closed)
+            {
+                _connection.Open();
+            }
 
             _transactionBase = transactionBase;
         }

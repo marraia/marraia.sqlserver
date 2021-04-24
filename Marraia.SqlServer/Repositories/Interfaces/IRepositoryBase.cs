@@ -8,9 +8,9 @@ namespace Marraia.SqlServer.Repositories.Interfaces
         where TEntity : class
         where TKey : struct
     {
-        Task InsertAsync(TEntity entity);
+        Task<TKey> InsertAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
-        Task DeleteAsync(TKey id);
+        Task<int> DeleteAsync(TKey id);
         Task<TEntity> GetByIdAsync(TKey id);
         Task<IEnumerable<TEntity>> GetAllAsync();
     }
