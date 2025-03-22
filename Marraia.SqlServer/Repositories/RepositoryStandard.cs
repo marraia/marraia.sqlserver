@@ -1,4 +1,5 @@
 ﻿using Marraia.SqlServer.Comum;
+using Marraia.SqlServer.Core;
 using Marraia.SqlServer.Uow.Interfaces;
 
 using System;
@@ -7,7 +8,7 @@ using System.Data;
 namespace Marraia.SqlServer.Repositories
 {
     public abstract class RepositoryStandard<TEntity, TKey> : CommonConfiguration<TEntity>, IDisposable
-        where TEntity : class
+        where TEntity : Entity<TKey>
         where TKey : struct
     {
         protected readonly IDbConnection _connection;

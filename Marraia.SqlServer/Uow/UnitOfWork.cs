@@ -11,7 +11,7 @@ namespace Marraia.SqlServer.Uow
         private IDbTransaction DbTransaction { get; set; }
 
         public UnitOfWork(IDbConnection connection,
-                                 ITransactionBase transactionBase)
+                          ITransactionBase transactionBase)
         {
             _connection = connection;
             _transactionBase = transactionBase;

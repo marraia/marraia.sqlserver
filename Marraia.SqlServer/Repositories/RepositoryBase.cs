@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Marraia.SqlServer.Comum;
+using Marraia.SqlServer.Core;
 using Marraia.SqlServer.Repositories.Interfaces;
 using Marraia.SqlServer.Uow.Interfaces;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace Marraia.SqlServer.Repositories
 {
     public abstract class RepositoryBase<TEntity, TKey> : CommonConfiguration<TEntity>, IRepositoryBase<TEntity, TKey>, IDisposable
-        where TEntity : class
+        where TEntity : Entity<TKey>
         where TKey : struct
     {
         protected readonly IDbConnection _connection;
